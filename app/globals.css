@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg:           #080706;
+  --surface:      #0D0C0A;
+  --border:       #1A1815;
+  --orange:       #C45A0A;
+  --green:        #55cc55;
+  --red:          #cc5555;
+  --blue:         #6688ee;
+  --gray1:        #AAAAAA;
+  --gray2:        #666666;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: white;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Monospace for all technical content */
+code, pre, .font-mono {
+  font-family: 'DM Mono', 'Courier New', monospace;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gray2); }
+
+/* RainbowKit override */
+[data-rk] {
+  --rk-colors-accentColor: #C45A0A !important;
+  --rk-colors-accentColorForeground: white !important;
+  --rk-colors-modalBackground: #0D0C0A !important;
+  --rk-colors-modalBorder: #1A1815 !important;
+  --rk-colors-menuItemBackground: #080706 !important;
+}
